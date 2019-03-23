@@ -28,4 +28,4 @@ Running the project
 $ npm start
 ```
 
-Project must run in (http://localhost:5000/)[http://localhost:5000/]
+Project must run in [http://localhost:5000/](http://localhost:5000/)
