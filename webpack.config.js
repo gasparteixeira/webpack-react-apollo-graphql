@@ -1,5 +1,7 @@
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 var config = {
   entry: "./src/index.js",
@@ -28,7 +30,12 @@ var config = {
       systemvars: true,
       silent: true,
       defaults: false
-    })
+    }),
+    new HtmlWebPackPlugin({
+      template: "./public/index.html",
+      filename: "./index.html"
+    }),
+    new CleanWebpackPlugin()
   ],
   devServer: {
     contentBase: "./dist",
